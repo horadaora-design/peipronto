@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lato:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-brand-blue: #1B3A6B;
+  --color-brand-green: #2D7D46;
+  --color-brand-orange: #F06A00;
+  --color-brand-gold: #F5A623;
+  --color-brand-gray: #F8F9FA;
+  --color-brand-dark: #1A1A1A;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.bg-grid {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, #e5e7eb 0.8px, transparent 0.8px);
+}
+
+@media (min-width: 768px) {
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  }
+}
