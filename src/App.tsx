@@ -511,18 +511,7 @@ export default function App() {
             >
               <div className="flex justify-between items-start mb-6">
                 <span className="text-4xl font-black text-slate-100 absolute top-4 right-6 select-none">{bonus.num}</span>
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                  bonus.color === 'blue' ? 'bg-brand-blue/10 text-brand-blue' : 
-                  bonus.color === 'pink' ? 'bg-pink-100 text-pink-600' : 
-                  'bg-brand-gold/10 text-brand-gold'
-                }`}>
-                  {bonus.num === "01" && <Brain size={24} />}
-                  {bonus.num === "02" && <Type size={24} />}
-                  {bonus.num === "03" && <ShieldCheck size={24} />}
-                  {bonus.num === "04" && <Sparkles size={24} />}
-                  {bonus.num === "05" && <Pencil size={24} />}
-                  {bonus.num === "06" && <Star size={24} />}
-                </div>
+
               </div>
 
               <h4 className="text-xl font-black text-brand-dark mb-3 leading-tight">Bônus {bonus.num.replace(/^0/, '')}: {bonus.title}</h4>
