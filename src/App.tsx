@@ -241,13 +241,13 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto relative z-10"
         >
-          <h1 className="text-[2.2rem] sm:text-[3.5rem] md:text-[5.5rem] font-black text-brand-blue leading-[1] md:leading-[1.1] tracking-tight mb-4 text-balance">
-            Recupere seu tempo e tenha <span className="relative inline-block">segurança técnica:<span className="absolute left-0 bottom-2 md:bottom-4 w-full h-1.5 md:h-3 bg-brand-blue/10 -z-10 rounded-full" /></span>
+          <h1 className="text-[2.2rem] sm:text-[3.5rem] md:text-[5.5rem] font-black text-brand-blue leading-[1] md:leading-[1.1] tracking-tight mb-4 text-balance uppercase">
+            +150 PEIS, PDIS E PAEE PRONTOS E EDITÁVEIS NO WORD
             <br className="md:block" />
-            Seus PEIs prontos em <span className="relative inline-block text-brand-orange">15 minutos.<span className="absolute left-0 bottom-2 md:bottom-4 w-full h-1.5 md:h-3 bg-brand-gold/40 -z-10 rounded-full" /></span>
+            <span className="text-brand-orange">Seu Pei pronto em 15 minutos</span>
           </h1>
           
-          <p className="text-slate-600 font-bold text-sm md:text-base uppercase tracking-widest mb-8">Monte seus planos com quem entende a sua rotina na sala de aula</p>
+          <p className="text-slate-600 font-bold text-sm md:text-base uppercase tracking-widest mb-8">Assista o vídeo abaixo e veja o que você vai receber</p>
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -275,7 +275,7 @@ export default function App() {
             className="bg-brand-gold border-2 border-brand-dark rounded-2xl px-6 md:px-12 py-5 md:py-10 inline-block shadow-[10px_10px_0px_0px_rgba(26,26,26,1)] mb-10 -rotate-1 hover:rotate-0 transition-transform duration-300 max-w-4xl"
           >
             <h2 className="text-base sm:text-xl md:text-3xl font-black text-brand-dark leading-tight text-balance">
-              Receba +150 modelos de PEIs prontos, completos e editáveis para Educação Infantil, Fundamental e Ensino Médio. Você edita, adapta e entrega.
+              Receba +150 modelos de PEIs prontos e editáveis para Educação Infantil, Fundamental e Ensino Médio. Alinhados com o novo decreto e a BNCC.
             </h2>
           </motion.div>
 
@@ -525,7 +525,7 @@ export default function App() {
                 </div>
               </div>
 
-              <h4 className="text-xl font-black text-brand-dark mb-3 leading-tight">{bonus.title}</h4>
+              <h4 className="text-xl font-black text-brand-dark mb-3 leading-tight">Bônus {bonus.num.replace(/^0/, '')}: {bonus.title}</h4>
               <p className="text-slate-500 font-bold text-sm leading-relaxed mb-6 flex-1">{bonus.desc}</p>
               
               <div className="flex flex-wrap gap-2 mb-6">
@@ -554,7 +554,7 @@ export default function App() {
       {/* Social Proof Section */}
       <Section className="bg-brand-gray border-t border-slate-200">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-5xl font-black text-brand-dark uppercase px-4 leading-tight">ENTREGA DO MATERIAL VIA WHATSAPP:</h2>
+          <h2 className="text-2xl md:text-5xl font-black text-brand-dark uppercase px-4 leading-tight">ENTREGA DO MATERIAL VIA WHATSAPP E E-MAIL:</h2>
           <p className="text-sm md:text-xl text-slate-600 mt-4 font-bold px-4 italic">
             Resultados reais de quem já adquiriu e aprovou!
           </p>
@@ -593,7 +593,8 @@ export default function App() {
                       { text: "BÔNUS 4: +100 Atividades para autismo", bold: true },
                       { text: "BÔNUS 5: +240 Relatórios Descritivos Prontos", bold: true },
                       { text: "BÔNUS 6: Guia Prático do PEI (Zero ao Avançado)", bold: true },
-                      { text: "Acesso Vitalício e atualizações mensais", bold: true }
+                      { text: "Acesso Vitalício e atualizações mensais", bold: true },
+                      { text: "Envio imediato via E-mail e WhatsApp", bold: true }
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-4 p-4 bg-brand-gray rounded-2xl border border-slate-100 group hover:border-brand-blue/30 transition-colors">
                         <CircleCheckBig className="text-brand-green shrink-0 mt-0.5" size={24} />
@@ -617,7 +618,7 @@ export default function App() {
                 </div>
 
                 <Button href={CHECKOUT_URL} className="bg-brand-green text-white border-b-8 border-green-950 hover:bg-green-600 text-xl md:text-4xl py-8 md:py-12 shadow-2xl">
-                  QUERO MEU KIT AGORA <ArrowRight className="inline-block ml-2 w-8 h-8 md:w-12 md:h-12" />
+                  QUERO MEU KIT AGORA
                 </Button>
 
                 <div className="mt-12 pt-12 border-t border-slate-100 grid grid-cols-3 gap-4 md:gap-8 text-[9px] md:text-sm font-black text-slate-400 uppercase tracking-widest text-center">
@@ -714,7 +715,7 @@ export default function App() {
       <Section className="bg-brand-gray border-t border-slate-200" tight>
         <div className="max-w-2xl mx-auto text-center">
           <Button onClick={scrollToOffer} className="bg-brand-green text-white border-b-8 border-green-950 hover:bg-green-600">
-            QUERO MEU ACESSO AGORA <ArrowRight className="ml-2" />
+            QUERO MEU ACESSO AGORA
           </Button>
           <p className="mt-6 text-xs font-black text-slate-400 uppercase tracking-widest">Aproveite o preço de lançamento por tempo limitado</p>
         </div>
