@@ -78,9 +78,9 @@ const Button = ({ children, onClick, href, className = "" }: { children: React.R
 
 const StickyNote = ({ children, color = "yellow", rotation = "rotate-1", value = "" }: { children: React.ReactNode, color?: 'yellow' | 'pink' | 'blue', rotation?: string, value?: string }) => {
   const colors = {
-    yellow: "bg-yellow-100 border-yellow-200 text-yellow-900",
-    pink: "bg-pink-100 border-pink-200 text-pink-900",
-    blue: "bg-blue-100 border-blue-200 text-blue-900"
+    yellow: "bg-brand-gold/20 border-brand-gold text-brand-dark",
+    pink: "bg-brand-pink/20 border-brand-pink text-brand-dark",
+    blue: "bg-brand-blue/20 border-brand-blue text-brand-dark"
   };
   
   return (
@@ -105,7 +105,7 @@ const FAQItem = ({ question, answer }: { question: string, answer: React.ReactNo
         className="w-full p-5 flex items-center justify-between text-left font-bold text-slate-800 gap-4 transition-colors hover:bg-slate-50"
       >
         <span className="text-sm md:text-base leading-tight">{question}</span>
-        <CircleHelp size={18} className={`shrink-0 transition-transform ${isOpen ? "rotate-180 text-blue-600" : "text-slate-300"}`} />
+        <CircleHelp size={18} className={`shrink-0 transition-transform ${isOpen ? "rotate-180 text-brand-blue" : "text-slate-300"}`} />
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -152,7 +152,7 @@ const ImageCarousel = ({ images, aspectClass = "aspect-[3/4] md:aspect-[4/3]" }:
           <button 
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${currentIndex === idx ? "bg-blue-600 w-6 md:w-8" : "bg-slate-300"}`}
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${currentIndex === idx ? "bg-brand-blue w-6 md:w-8" : "bg-slate-300"}`}
           />
         ))}
       </div>
@@ -175,10 +175,10 @@ const PhoneCarousel = () => {
             className="w-full h-full object-cover select-none transition-opacity duration-300"
           />
         </div>
-        <button onClick={prev} className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 bg-white p-3 md:p-4 rounded-full shadow-2xl hover:bg-blue-500 hover:text-white transition-all z-20 text-slate-800">
+        <button onClick={prev} className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 bg-white p-3 md:p-4 rounded-full shadow-2xl hover:bg-brand-green hover:text-white transition-all z-20 text-slate-800">
           <ChevronLeft size={28} />
         </button>
-        <button onClick={next} className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 bg-white p-3 md:p-4 rounded-full shadow-2xl hover:bg-blue-500 hover:text-white transition-all z-20 text-slate-800">
+        <button onClick={next} className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 bg-white p-3 md:p-4 rounded-full shadow-2xl hover:bg-brand-green hover:text-white transition-all z-20 text-slate-800">
           <ChevronRight size={28} />
         </button>
       </div>
@@ -187,7 +187,7 @@ const PhoneCarousel = () => {
           <button 
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`h-2 rounded-full transition-all ${currentIndex === idx ? "bg-blue-600 w-8" : "bg-slate-300 w-2"}`}
+            className={`h-2 rounded-full transition-all ${currentIndex === idx ? "bg-brand-green w-8" : "bg-slate-300 w-2"}`}
           />
         ))}
       </div>
@@ -219,14 +219,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-grid text-[#1e293b]">
       {/* Countdown Bar */}
-      <div className="bg-red-600 text-white py-2.5 px-4 text-center font-bold text-[10px] md:text-sm sticky top-0 z-[60] flex justify-center items-center gap-2 shadow-lg">
+      <div className="bg-brand-pink text-white py-2.5 px-4 text-center font-bold text-[10px] md:text-sm sticky top-0 z-[60] flex justify-center items-center gap-2 shadow-lg">
         <Zap size={14} className="animate-pulse" />
         PROMOÇÃO TERMINA EM:
-        <span className="font-black text-yellow-300 ml-1">{formatTime(timeLeft)}</span>
+        <span className="font-black text-brand-gold ml-1">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Header */}
-      <header className="pt-6 md:pt-10 pb-12 md:pb-24 px-4 text-center bg-white border-b-8 border-brand-gold relative overflow-hidden">
+      <header className="pt-6 md:pt-10 pb-12 md:pb-24 px-4 text-center bg-white border-b-8 border-brand-blue relative overflow-hidden">
         <div className="absolute top-10 left-10 opacity-10 pointer-events-none hidden md:block">
           <Star size={48} className="text-brand-gold rotate-12" />
         </div>
@@ -285,10 +285,10 @@ export default function App() {
             className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10"
           >
             {[
-              { label: "Autismo (TEA)", color: "bg-[#7c3aed]", icon: <Brain size={16} /> },
-              { label: "TDAH", color: "bg-[#f59e0b]", icon: <Zap size={16} /> },
-              { label: "Dislexia", color: "bg-brand-blue", icon: <Type size={16} /> },
-              { label: "Intelectual", color: "bg-[#f472b6]", icon: <Dna size={16} /> }
+              { label: "Autismo (TEA)", color: "bg-brand-blue", icon: <Brain size={16} /> },
+              { label: "TDAH", color: "bg-brand-orange", icon: <Zap size={16} /> },
+              { label: "Dislexia", color: "bg-brand-green", icon: <Type size={16} /> },
+              { label: "Intelectual", color: "bg-brand-pink", icon: <Dna size={16} /> }
             ].map((tag, i) => (
               <div key={i} className={`${tag.color} text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-black text-[11px] md:text-sm flex items-center gap-2 shadow-md uppercase tracking-wide`}>
                 {tag.icon} {tag.label}
@@ -325,11 +325,11 @@ export default function App() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
           {[
             { text: "PEI não deveria levar horas", color: "border-brand-blue" },
-            { text: "Você não precisa reinventar tudo", color: "border-brand-orange" },
+            { text: "Você não precisa reinventar tudo", color: "border-brand-pink" },
             { text: "Seu tempo vale muito mais", color: "border-brand-green" }
           ].map((item, i) => (
             <div key={i} className={`bg-white border-2 ${item.color} p-8 md:p-12 rounded-[2.5rem] shadow-sm flex items-center gap-4 transition-transform hover:scale-105`}>
-              <CircleCheckBig className="text-brand-green shrink-0" size={32} />
+              <CircleCheckBig className={item.color.replace('border-', 'text-')} size={32} />
               <span className="text-lg md:text-xl font-black text-brand-dark leading-tight">{item.text}</span>
             </div>
           ))}
@@ -340,7 +340,7 @@ export default function App() {
       {/* What You Get Section */}
       <Section className="bg-white">
         <div className="text-center mb-16 md:mb-24">
-          <Badge className="bg-brand-blue text-white mb-6 !text-xs md:!text-lg py-3 px-8 shadow-lg">
+          <Badge className="bg-brand-pink text-white mb-6 !text-xs md:!text-lg py-3 px-8 shadow-lg">
             O que você recebe ao adquirir o kit
           </Badge>
           <h2 className="text-3xl md:text-6xl font-black text-brand-dark uppercase tracking-tighter leading-[1] mb-8">
@@ -498,7 +498,7 @@ export default function App() {
               whileHover={{ y: -8, scale: 1.02 }}
               className={`relative p-8 rounded-3xl border-2 transition-all shadow-xl flex flex-col h-full bg-white ${bonus.highlight ? 'border-brand-blue ring-4 ring-brand-blue/10' : 'border-slate-200 hover:border-brand-blue'}`}
             >
-              <div className="absolute -top-4 -right-2 bg-brand-orange text-white text-[10px] font-black px-3 py-1 rounded-lg shadow-lg rotate-12 z-10">
+              <div className="absolute -top-4 -right-2 bg-brand-pink text-white text-[10px] font-black px-3 py-1 rounded-lg shadow-lg rotate-12 z-10">
                 100% GRÁTIS
               </div>
               <div className="flex justify-between items-start mb-6">
@@ -544,7 +544,7 @@ export default function App() {
       </Section>
 
       {/* Offer Section */}
-      <Section id="oferta" className="bg-blue-50 pt-16 md:pt-24 pb-32 md:pb-48">
+      <Section id="oferta" className="bg-brand-gray pt-16 md:pt-24 pb-32 md:pb-48">
         <div className="max-w-3xl mx-auto">
           <div className="relative">
             {/* Tablet/Phone Top Detail */}
@@ -554,7 +554,7 @@ export default function App() {
             
             <div className="bg-white rounded-[2.5rem] md:rounded-[4rem] shadow-[0_40px_100px_rgba(27,58,107,0.1)] border-4 border-brand-dark overflow-hidden relative z-10">
               <div className="bg-brand-blue py-10 md:py-16 px-8 text-center text-white">
-                <Badge className="bg-white/20 text-white mb-6 border border-white/30 py-2 px-6">Oportunidade Única</Badge>
+                <Badge className="bg-brand-pink text-white mb-6 border border-white/30 py-2 px-6 shadow-lg">Oportunidade Única</Badge>
                 <h3 className="text-3xl md:text-7xl font-black italic uppercase tracking-tighter leading-tight">OFERTA DE LANÇAMENTO</h3>
                 <p className="mt-4 text-[10px] md:text-sm font-black text-white/80 uppercase tracking-[0.2em] animate-pulse">
                   Atenção: Se você sair desta página agora, esta oferta única poderá desaparecer para sempre.
@@ -709,7 +709,7 @@ export default function App() {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-brand-dark text-white py-24 px-6 text-center border-t-8 border-brand-orange">
+      <footer className="bg-brand-dark text-white py-24 px-6 text-center border-t-8 border-brand-pink">
         <div className="max-w-3xl mx-auto space-y-10">
           <Pencil size={48} className="mx-auto text-brand-gold" />
           <p className="text-xl md:text-3xl font-medium text-slate-300 leading-relaxed italic px-4">

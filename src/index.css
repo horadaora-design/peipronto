@@ -5,12 +5,13 @@
   --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Montserrat", sans-serif;
   
-  --color-brand-blue: #1B3A6B;
-  --color-brand-green: #2D7D46;
-  --color-brand-orange: #F06A00;
-  --color-brand-gold: #F5A623;
-  --color-brand-gray: #F8F9FA;
-  --color-brand-dark: #1A1A1A;
+  --color-brand-blue: #0088FF;
+  --color-brand-green: #00D084;
+  --color-brand-orange: #FF6900;
+  --color-brand-gold: #FCB900;
+  --color-brand-pink: #EB144C;
+  --color-brand-gray: #F0F7FF;
+  --color-brand-dark: #0F172A;
 }
 
 body {
