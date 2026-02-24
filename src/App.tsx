@@ -33,7 +33,6 @@ const WHATSAPP_PROOFS = [
 ];
 
 const SAMPLE_IMAGES = [
-  "https://digitallfp.wordpress.com/wp-content/uploads/2026/01/amostra.png",
   "https://digitallfp.wordpress.com/wp-content/uploads/2026/01/1.jpg",
   "https://digitallfp.wordpress.com/wp-content/uploads/2026/01/2.jpg",
   "https://digitallfp.wordpress.com/wp-content/uploads/2026/01/3.jpg",
@@ -307,7 +306,7 @@ export default function App() {
               QUERO MEUS PEIS PRONTOS AGORA
             </Button>
             <div className="mt-5 flex flex-col items-center gap-1.5">
-              <p className="text-brand-green font-black text-xl md:text-3xl">Apenas R$ 19,90</p>
+              <p className="text-brand-green font-black text-xl md:text-3xl">Apenas R$ 29,90</p>
               <div className="flex items-center gap-2 text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest">
                 <ShieldCheck size={14} className="text-brand-green" /> Compra Segura | Acesso Imediato
               </div>
@@ -335,15 +334,7 @@ export default function App() {
             </div>
           ))}
         </div>
-        <div className="mt-16 md:mt-24 text-center max-w-3xl mx-auto space-y-8">
-          <p className="text-xl md:text-3xl font-black text-brand-dark leading-tight">
-            Por isso, eu reuni mais de 150 modelos de PEIs, PDIs e PAEE prontos para usar.
-          </p>
-          <p className="text-lg md:text-2xl font-bold text-slate-600 leading-relaxed">
-            São modelos pensados de professora para professora, para você modelar, editar e entregar em poucos minutos, sem insegurança e sem retrabalho.
-          </p>
-          <div className="w-24 h-2 bg-brand-blue mx-auto rounded-full opacity-30" />
-        </div>
+
       </Section>
 
       {/* What You Get Section */}
@@ -353,11 +344,9 @@ export default function App() {
             O que você recebe ao adquirir o kit
           </Badge>
           <h2 className="text-3xl md:text-6xl font-black text-brand-dark uppercase tracking-tighter leading-[1] mb-8">
-            Tudo o que você precisa para montar PEIs sem sofrimento em 2026
+            Tudo o que você vai RECEBER para montar PEIs em 15 minutos
           </h2>
-          <p className="text-xl md:text-2xl font-bold text-slate-500 max-w-3xl mx-auto leading-relaxed">
-            Não é só um modelo. É um kit completo para você nunca mais travar na hora de montar PEI, PDI ou PAEE.
-          </p>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-24">
@@ -506,9 +495,12 @@ export default function App() {
           ].map((bonus, i) => (
             <motion.div 
               key={i}
-              whileHover={{ y: -5 }}
-              className={`relative p-8 rounded-3xl border-2 transition-all shadow-sm flex flex-col h-full bg-white ${bonus.highlight ? 'border-brand-blue ring-4 ring-brand-blue/5' : 'border-slate-100 hover:border-brand-blue'}`}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className={`relative p-8 rounded-3xl border-2 transition-all shadow-xl flex flex-col h-full bg-white ${bonus.highlight ? 'border-brand-blue ring-4 ring-brand-blue/10' : 'border-slate-200 hover:border-brand-blue'}`}
             >
+              <div className="absolute -top-4 -right-2 bg-brand-orange text-white text-[10px] font-black px-3 py-1 rounded-lg shadow-lg rotate-12 z-10">
+                100% GRÁTIS
+              </div>
               <div className="flex justify-between items-start mb-6">
                 <span className="text-4xl font-black text-slate-100 absolute top-4 right-6 select-none">{bonus.num}</span>
 
@@ -564,6 +556,9 @@ export default function App() {
               <div className="bg-brand-blue py-10 md:py-16 px-8 text-center text-white">
                 <Badge className="bg-white/20 text-white mb-6 border border-white/30 py-2 px-6">Oportunidade Única</Badge>
                 <h3 className="text-3xl md:text-7xl font-black italic uppercase tracking-tighter leading-tight">OFERTA DE LANÇAMENTO</h3>
+                <p className="mt-4 text-[10px] md:text-sm font-black text-white/80 uppercase tracking-[0.2em] animate-pulse">
+                  Atenção: Se você sair desta página agora, esta oferta única poderá desaparecer para sempre.
+                </p>
               </div>
               
               <div className="p-8 md:p-16">
@@ -599,7 +594,7 @@ export default function App() {
                   <p className="text-xl md:text-4xl text-slate-400 line-through font-bold mb-2">De R$ 79,90</p>
                   <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline gap-2 md:gap-5 mb-6">
                     <span className="text-2xl md:text-5xl font-black text-brand-dark uppercase italic">Por</span>
-                    <span className="text-7xl md:text-[10rem] font-black text-brand-green tracking-tighter leading-none">R$ 19,90</span>
+                    <span className="text-7xl md:text-[10rem] font-black text-brand-green tracking-tighter leading-none">R$ 29,90</span>
                   </div>
                   <div className="bg-white/90 backdrop-blur-sm text-brand-blue font-black py-3 md:py-4 px-8 md:px-12 rounded-full inline-block text-xs md:text-xl border-2 border-brand-blue/10 uppercase tracking-widest">
                     PAGAMENTO ÚNICO NO PIX E NO CARTÃO
@@ -707,6 +702,9 @@ export default function App() {
             QUERO MEU ACESSO AGORA
           </Button>
           <p className="mt-6 text-xs font-black text-slate-400 uppercase tracking-widest">Aproveite o preço de lançamento por tempo limitado</p>
+          <p className="mt-2 text-[10px] font-black text-red-500 uppercase tracking-widest animate-pulse">
+            Atenção: Se você sair desta página agora, esta oferta única poderá desaparecer para sempre.
+          </p>
         </div>
       </Section>
 
